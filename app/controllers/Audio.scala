@@ -1,13 +1,11 @@
-//package controllers
-//
-//import javafx.scene.media.Media
-//import javafx.scene.media.MediaPlayer
-//
-//object Audio extends Controllers {
-//
-//  def playMp3(mp3: String) {
-//    var hit: Media = new Media(mp3);
-//    var mediaPlayer: MediaPlayer = new MediaPlayer(hit);
-//    mediaPlayer.play();
-//  }
-//}
+package controllers
+
+import javazoom.jl.player.Player
+
+object Audio extends Controllers {
+  def playMp3(mp3: String) {
+    fis: FileInputStream  = new FileInputStream("mysong.mp3");
+    playMP3: Player = new Player(fis);
+    playMP3.play();
+  }
+}
